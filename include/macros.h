@@ -1,0 +1,7 @@
+#ifndef COMPILER_CONSTRUCTION_MACROS_H
+#define COMPILER_CONSTRUCTION_MACROS_H
+
+#define MIN(a, b) \
+    a < b ?  a : b
+
+#endif //COMPILER_CONSTRUCTION_MACROS_H
