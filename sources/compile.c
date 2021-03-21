@@ -9,8 +9,8 @@ void compile(char* src, FILE* output){
     Token* token;
 
     while ((token = scan_next_token(scanner))->type != TOKEN_EOF){
-        fprintf(output,"TOKEN {%s} {%d}\n", token->value, token->type);
-//        fprintf(output, "%s", token2str(token));  TODO: Implement this
+       // fprintf(output,"TOKEN {%s} {%d}\n", token->value, token->type);
+        fprintf(output, "%s", token2str(token));
     }
 }
 

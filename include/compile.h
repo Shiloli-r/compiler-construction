@@ -1,5 +1,6 @@
 #ifndef COMPILER_CONSTRUCTION_COMPILE_H
 #define COMPILER_CONSTRUCTION_COMPILE_H
+#include <stdio.h>
 
 void compile(char* src, FILE* output); // prints tokens (types and values)
 
