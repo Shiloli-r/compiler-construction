@@ -9,17 +9,19 @@ typedef struct Token{
         TOKEN_LPAREN,
         TOKEN_RPAREN,
         TOKEN_INT,
+        TOKEN_FLOAT,
         TOKEN_STRING,
+        TOKEN_KEYWORD,
+        TOKEN_UNKNOWN,
         TOKEN_LBRACKET,
         TOKEN_RBRACKET,
+        TOKEN_LT,
         TOKEN_LBRACE,
         TOKEN_RBRACE,
-        TOKEN_LT,
-        TOKEN_COLON,
         TOKEN_COMMA,
         TOKEN_PLUS_EQUALS,
         TOKEN_FORWARD_SLASH,
-        TOKEN_EOF,
+        TOKEN_EOF
     } type;
 } Token;
 
