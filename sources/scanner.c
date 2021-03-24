@@ -160,7 +160,9 @@ Token *scan_next_token(Scanner *scanner)
             case '+': {
                 if (scanner_check_next(scanner, 1) == '='){
                     scanner_adv(scanner);
-                    return scanner_adv_with(scanner, init_token("+=", TOKEN_PLUS_EQUALS));
+                    char* value = calloc(3, sizeof(char));
+                    strcat(value, "+=");
+                    return scanner_adv_with(scanner, init_token(value, TOKEN_PLUS_EQUALS));
                 }else{
                     return scanner_adv_with(scanner, scanner_parse_unknown(scanner));
                 }
@@ -173,7 +175,7 @@ Token *scan_next_token(Scanner *scanner)
     }
 
     //At the end of the file now
-    return init_token(0, TOKEN_EOF);
+    return init_token(NULL, TOKEN_EOF);
 }
 
 static const char* token_type2str(int type){
